@@ -3,8 +3,6 @@
 
 using namespace std;
 
-
-
 int main() {
 	string originalStr, reversedStr;
 	cout << "Enter a string to be reversed: "; cin >> originalStr;
