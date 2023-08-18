@@ -9,7 +9,6 @@ public:
         //For loop going through flowerbed to determine if we can place one or not
         for(int i = 0; i < flowerbed.size(); ++i) {
         
-
             //If statement to check if a flower is there or not
             if(flowerbed[i] == 0) {
                 //Checks if it can put a flower at the beginning 
