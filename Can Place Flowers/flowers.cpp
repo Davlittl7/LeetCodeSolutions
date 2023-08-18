@@ -11,11 +11,7 @@ public:
         
 
             //If statement to check if a flower is there or not
-            if(flowerbed[i] == 1) {
-                continue;
-            //Else statement for if there is no flower
-            } else {
-               
+            if(flowerbed[i] == 0) {
                 //Checks if it can put a flower at the beginning 
                 if(i == 0 && (i + 1) < flowerbed.size() && flowerbed[i + 1] == 0) {
                     flowerbed[i] = 1;
@@ -40,9 +36,11 @@ public:
                     n -= 1;
                     if(n == 0) return true;
                 }
-                
-            }
-            //Allows for for loop to end if function is able to place all flowers
+
+            //Else statement for if there is a flower
+            } else continue;   
+            
+            //Allows for the for loop to end if function is able to place all flowers
             if(n == 0) return true;
         }
         
