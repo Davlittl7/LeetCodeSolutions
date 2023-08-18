@@ -15,15 +15,15 @@ public:
                 if(i == 0 && (i + 1) < flowerbed.size() && flowerbed[i + 1] == 0) {
                     flowerbed[i] = 1;
                     n -= 1;
-                    if(n == 0) return true;
+                    if(n == 0) return true; //If all flowers are placed, return true
                     continue;
                 }
                 
-                //For a flower at the end
+                //Checks if it can put a flower at the end
                 if(i == (flowerbed.size() - 1) && (i - 1) > 0 && flowerbed[i - 1] == 0) {
-                    flowerbed[i] = 1;
-                    n -= 1;
-                    if(n == 0) return true;
+                    flowerbed[i] = 1; //Places flower
+                    n -= 1; //Decrements n 
+                    if(n == 0) return true; //If all flowers are placed, return true
                     continue;
                 }
 
@@ -33,13 +33,13 @@ public:
                     //Adds the flower and decrements n
                     flowerbed[i] = 1;
                     n -= 1;
-                    if(n == 0) return true;
+                    if(n == 0) return true; //If all flowers are placed, return true
                 }
 
             //Else statement for if there is a flower
             } else continue;   
             
-            //Allows for the for loop to end if function is able to place all flowers
+            //Checks again before looping again if all flowers are placed
             if(n == 0) return true;
         }
         
